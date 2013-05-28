@@ -1,0 +1,27 @@
+Consumer:
+1) Opens the app
+2) Loads a configuration file that holds the promoter's email address
+3) Consumer fills out a form
+	- First and Last name
+	- Number of people
+	- Need a table? Yes or No
+        - How would you like to be notify?
+			- Email address
+ 			- Text Message 
+	- Submit button
+4) "Thank you" Message  and/or "Error" Message
+
+
+Promoter 
+1) Recieves an email with the form data
+2) Contacts the consumer via email address or text message
+
+
+Tasks:
+- Build the user interface (Ilya)
+- Build our the "Request" data model (Ilya)
+- Build the configuration file and load it on startup (Ilya)
+- Build out the Gateway Service. This should take in all the properties of the form and email it to the promoter (NT)
+	- For this one we have to use the "ios grand central dispatch" based on what the TA said. I haven't looked at this yet.
+	- Should just be one public method call "sendRequest", maybe just return true or false to let the UI know if it worked or not.
+	- Maybe we need to use SendGrid? Need to figure out the easiest way to send an email out to the internet from the iPhone 
